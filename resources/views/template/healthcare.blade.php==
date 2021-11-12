@@ -1,0 +1,389 @@
+@include('new_header')
+
+
+<input type="hidden" id="type_filter" value="">
+<input type="hidden" id="currnt_usr" value="<?php if(!empty($currentid)){echo $currentid;} ?>">
+<div class="main-content" style="min-height: 100vh; background-color: #f6f6f6;">
+        <div class="">
+            <div class="page-title tab">
+                <div class="container page-title-container table-layout-fixed">
+                    <div class="page-title-col page-title-col-4"><a class="checkout-steps-link checkout-steps-link-tool" aria-current="false" href="{{url('/demobuildlist')}}"><span class="checkout-steps-link-text">Business Contacts</span></a></div>
+                    <div class="page-title-col page-title-col-4"><a class="checkout-steps-link checkout-steps-link-tool is-active"  aria-current="true" href="#"><span class="checkout-steps-link-text">Healthcare
+                                Professionals</span></a></div>
+                    <div class="page-title-col page-title-col-4"><a class="checkout-steps-link checkout-steps-link-tool" aria-current="false" href="real_estate.html"><span class="checkout-steps-link-text">Real Estate
+                                Agents</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="tool-top-bar">
+                <div class="tool-top-bar-inner">
+                    <div class="container">
+                        <div class="tool-top-bar-left"><span class="tool-top-bar-contacts gap-right">Add More
+                                Filters</span><span class="tool-top-bar-notification">Please add more filters to your
+                                search</span></div>
+                    </div>
+                    <div class="container">
+                        <div class="tool-top-bar-left"><span class="tool-top-bar-contacts gap-right">317,180
+                                Contacts</span>
+                            <div class="tool-top-bar-buttons"><button type="button" class="button button-senary gap-right-medium"><span>
+                                        <img src="images/download.jpg">
+                                    </span> Download A
+                                    Sample</button><button type="button" class="button button-senary gap-right-medium"><span>
+                                        <img src="images/save.jpg">
+                                    </span> Save This
+                                    List</button></div>
+                        </div>
+                        <div class="tool-top-bar-right"><span class="tool-top-bar-price gap-right">$14,222</span><button type="button" class="button button-primary button-small"><span>
+                                    <img src="images/cart-small.jpg">
+                                </span> Buy This List</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-budget-container">
+                <hr class="hr-line">
+                <div class="contact-budget">
+                    <div class="container contact-budget-inner">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="contact-budget-title">Adjust Your Contacts / Budget<span class="gap-left"><span class="question-mark js-popover" data-trigger="focus hover" data-toggle="popover" data-content="You can adjust change your targeted amount of contacts or budget by scrolling here." data-placement="right" data-container="body" data-original-title="" title="">?</span></span></h4>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="margin-top: 6px;">
+                                    <div class="rc-slider rc-slider-adjust">
+                                        <div class="rc-slider-rail" style="background-color: rgb(218, 218, 218); height: 6px; border: 1px solid rgb(151, 151, 151); border-radius: 0px;">
+                                        </div>
+                                        <div class="rc-slider-track" style="visibility: visible; background-color: rgb(218, 218, 218); height: 6px; border: 1px solid rgb(151, 151, 151); border-radius: 0px; left: 0%; width: 100%;">
+                                        </div>
+                                        <div class="rc-slider-step"></div>
+                                        <div role="slider" tabindex="0" aria-valuemin="1" aria-valuemax="317180" aria-valuenow="317180" aria-disabled="false" class="rc-slider-handle" style="width: 12px; height: 20px; margin-top: -7px; border-radius: 0px; border: medium none; background-color: rgb(253, 0, 13); left: 100%;">
+                                        </div>
+                                        <div class="rc-slider-mark"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-adjust">
+                                    <form><input type="text" class="form-control-adjust" value="317180"><button class="button button-secondary button-small">Set</button></form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pad-top-small pad-bottom-medium bg-vapor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="shadow-primary form form-slim form-tool">
+                            <div class="box">
+                                <h4 class="box-title"><span><span class="align-middle">Location</span> <span class="question-mark js-popover" data-trigger="focus hover" data-toggle="popover" data-content="You can narrow your search by selecting your desired countries, regions, counties, cities, zipcodes or even &quot;radius&quot;. Please enter zipcode first in order to filter by radius." data-placement="right" data-container="body" data-original-title="" title="">?</span></span></h4>
+                                <div>
+                                    <div class="gap-bottom-small">
+                                        <div class="c-filter-selectbox">
+                                            <div class="c-filter-selectbox-trigger" role="button" tabindex="0"><span class="c-filter-selectbox-placeholder-text">Country</span><span class="icon icon-menu c-filter-selectbox-placehodler-icon u-gap-left-auto"></span>
+                                            </div>
+                                            <div class="c-filter-selectbox-dropdown">
+                                                <div class="c-filter-selectbox-container">
+                                                    <div class="u-flex u-flex-extend">
+                                                        <div class="c-filter-selectbox-content c-filter-selectbox-content-fixed-footer">
+                                                            <div>
+                                                                <h5 class="secondary-title clear-gap-top">Select
+                                                                    Continent or Country</h5>
+                                                                <p class="font-small">You can select one or more
+                                                                    continent or country.</p>
+                                                            </div>
+                                                            <div class="c-filter-search">
+                                                                <div class="relative"><span class="icon icon-search-material c-filter-search-icon" aria-hidden="true"></span><input type="text" class="c-filter-search-input" value="" placeholder="Type to search"></div>
+                                                                <div class="c-filter-search-results">
+                                                                    <div class="c-filter-search-results-inner">
+                                                                        <div class="custom-scroll " style="flex: 1 1 0%;">
+                                                                            <div class="outer-container" style="height: 100%;">
+                                                                                <div class="inner-container" style="margin-right: -20px; height: 100%;">
+                                                                                    <div class="content-wrapper" style="margin-right: 20px; height: 100%; overflow-y: visible;">
+                                                                                        <ul class="c-choice-tree">
+                                                                                             @if(!empty($filter_contry))
+                                                                                                @foreach($filter_contry as $indus)
+
+                                                                                                <li class="c-choice-tree-item">
+                                                                                                   <div class="custom-checkbox custom-checkbox-primary c-choice-tree-checkbox">
+                                                                                                    <input class="custom-checkbox-inp filter_result"  value="{{$indus}}" type="checkbox" id="{{$indus}}" new-data="{{$indus}}" name="country" data-id="country"><label
+                                                                                                    for="{{$indus}}"
+                                                                                                    class="custom-checkbox-mask"></label>
+                                                                                                    </div><label for="{{$indus}}" class="c-choice-tree-label">{{$indus}}</label>
+                                                                                                </li>
+
+                                                                                            @endforeach
+                                                                                            @endif
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="c-filter-selectbox-actions u-gap-top-auto">
+                                                                <div class="u-gap-left-auto"><button type="button" class="button button-success-flat button-xsmall u-gap-left-auto"><i class="icon icon-check gap-right-small font-3xsmall" aria-hidden="true"></i>Include</button><button type="button" class="button button-denary button-xsmall gap-left"><i class="icon icon-clear gap-right-small font-small align-text-bottom" aria-hidden="true"></i>Exclude</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-filter-selectbox-content bg-concrete">
+                                                            <div>
+                                                                <h5 class="secondary-title clear-gap-top">Selected
+                                                                    Continents &amp; Countries</h5>
+                                                                <p class="font-small">Continents and countries that
+                                                                    you've chosen.</p>
+                                                            </div>
+                                                            <div>
+                                                                <div class="c-filter-selected-list gap-bottom-small">
+                                                                    <div class="c-filter-selected-list-inner">
+                                                                        <div class="custom-scroll " style="flex: 1 1 0%;">
+                                                                            <div class="outer-container" style="height: 100%;">
+                                                                                <div class="inner-container" style="margin-right: -17px; height: 100%;">
+                                                                                    <div class="content-wrapper" style="margin-right: 0px; height: 100%; overflow-y: visible;">
+                                                                                        <ul class="c-filter-selected-list-items">
+                                                                                            <li class="c-filter-selected-list-item">
+                                                                                                There is no selected
+                                                                                                item.</li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-filter-selectbox-overlayer" aria-hidden="true"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <h4 class="box-title">Contact Title</h4>
+                                <div>
+                                    <div class="gap-bottom-small">
+                                        <div class="c-filter-selectbox">
+                                            <div class="c-filter-selectbox-trigger" role="button" tabindex="0"><span class="c-filter-selectbox-placeholder-text">Specialty</span><span class="icon icon-menu c-filter-selectbox-placehodler-icon u-gap-left-auto"></span>
+                                            </div>
+                                            <div class="c-filter-selectbox-dropdown">
+                                                <div class="c-filter-selectbox-container">
+                                                    <div class="u-flex u-flex-extend">
+                                                        <div class="c-filter-selectbox-content c-filter-selectbox-content-fixed-footer">
+                                                            <div>
+                                                                <h5 class="secondary-title clear-gap-top">Select for
+                                                                    Specialties</h5>
+                                                                <p class="font-small">You can select one or more
+                                                                    specialty.</p>
+                                                            </div>
+                                                            <div class="c-filter-search">
+                                                                <div class="relative"><span class="icon icon-search-material c-filter-search-icon" aria-hidden="true"></span><input type="text" class="c-filter-search-input" value="" placeholder="Type to search"></div>
+                                                                <div class="c-filter-search-results">
+                                                                    <div class="c-filter-search-results-inner">
+                                                                        <div class="custom-scroll " style="flex: 1 1 0%;">
+                                                                            <div class="outer-container" style="height: 100%;">
+                                                                                <div class="inner-container" style="margin-right: -17px; height: 100%;">
+                                                                                    <div class="content-wrapper" style="margin-right: 0px; height: 100%; overflow-y: visible;">
+                                                                                        <ul class="c-choice-tree">
+                                                                                           @if(!empty($filter_specialty))
+                                                                                                @foreach($filter_specialty as $indus)
+
+                                                                                                <li class="c-choice-tree-item">
+                                                                                                   <div class="custom-checkbox custom-checkbox-primary c-choice-tree-checkbox">
+                                                                                                    <input class="custom-checkbox-inp filter_result"  value="{{$indus}}" type="checkbox" id="{{$indus}}" new-data="{{$indus}}" name="country" data-id="country"><label
+                                                                                                    for="{{$indus}}"
+                                                                                                    class="custom-checkbox-mask"></label>
+                                                                                                    </div><label for="{{$indus}}" class="c-choice-tree-label">{{$indus}}</label>
+                                                                                                </li>
+
+                                                                                            @endforeach
+                                                                                            @endif
+                                                                                          
+                                                                                           
+                                                                                           
+                                                                                            
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="c-filter-selectbox-actions u-gap-top-auto">
+                                                                <div class="u-gap-left-auto"><button type="button" class="button button-success-flat button-xsmall u-gap-left-auto"><i class="icon icon-check gap-right-small font-3xsmall" aria-hidden="true"></i>Include</button><button type="button" class="button button-denary button-xsmall gap-left"><i class="icon icon-clear gap-right-small font-small align-text-bottom" aria-hidden="true"></i>Exclude</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-filter-selectbox-content bg-concrete">
+                                                            <div>
+                                                                <h5 class="secondary-title clear-gap-top">Selected
+                                                                    Specialties</h5>
+                                                                <p class="font-small">Specialties that you've chosen.
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <div class="c-filter-selected-list gap-bottom-small">
+                                                                    <div class="c-filter-selected-list-inner">
+                                                                        <div class="custom-scroll " style="flex: 1 1 0%;">
+                                                                            <div class="outer-container" style="height: 100%;">
+                                                                                <div class="inner-container" style="margin-right: -17px; height: 100%;">
+                                                                                    <div class="content-wrapper" style="margin-right: 0px; height: 100%; overflow-y: visible;">
+                                                                                        <ul class="c-filter-selected-list-items">
+                                                                                            <li class="c-filter-selected-list-item">
+                                                                                                There is no selected
+                                                                                                item.</li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-filter-selectbox-overlayer" aria-hidden="true"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <h4 class="box-title">Company</h4>
+                                <div>
+                                    <div class="gap-bottom-small">
+                                        <div class="c-filter-selectbox">
+                                            <div class="c-filter-selectbox-trigger" role="button" tabindex="0"><span class="c-filter-selectbox-placeholder-text">Company
+                                                    Search</span><span class="icon icon-menu c-filter-selectbox-placehodler-icon u-gap-left-auto"></span>
+                                            </div>
+                                            <div class="c-filter-selectbox-dropdown">
+                                                <div class="c-filter-selectbox-container">
+                                                    <div class="c-filter-selectbox-content c-filter-selectbox-content-fixed-footer">
+                                                        <div>
+                                                            <h5 class="secondary-title clear-gap-top">Type a Company
+                                                                Name</h5>
+                                                            <p class="font-small">Please type a company name to select.
+                                                            </p>
+                                                        </div>
+                                                        <div class="c-filter-search">
+                                                            <div class="relative"><span class="icon icon-search-material c-filter-search-icon" aria-hidden="true"></span><input type="text" class="c-filter-search-input" value="" placeholder="Type for suggestions"></div>
+                                                            <div class="c-filter-search-results"></div>
+                                                        </div>
+                                                        <div class="c-filter-selectbox-actions u-gap-top-auto">
+                                                            <div class="u-gap-left-auto"><button type="button" class="button button-success-flat button-xsmall u-gap-left-auto"><i class="icon icon-check gap-right-small font-3xsmall" aria-hidden="true"></i>Include</button><button type="button" class="button button-denary button-xsmall gap-left"><i class="icon icon-clear gap-right-small font-small align-text-bottom" aria-hidden="true"></i>Exclude</button></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-filter-selectbox-content bg-concrete">
+                                                        <div>
+                                                            <h5 class="secondary-title clear-gap-top">Selected Companies
+                                                            </h5>
+                                                            <p class="font-small">Companies that you've chosen.</p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="c-filter-selected-list gap-bottom-small">
+                                                                <div class="c-filter-selected-list-inner">
+                                                                    <div class="custom-scroll " style="flex: 1 1 0%;">
+                                                                        <div class="outer-container" style="height: 100%;">
+                                                                            <div class="inner-container" style="margin-right: -17px; height: 100%;">
+                                                                                <div class="content-wrapper" style="margin-right: 0px; height: 100%; overflow-y: visible;">
+                                                                                    <ul class="c-filter-selected-list-items">
+                                                                                        <li class="c-filter-selected-list-item">
+                                                                                            There is no selected item.
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-filter-selectbox-overlayer" aria-hidden="true"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+
+                        <div class="shadow-primary section-flex section-flex-tool-no-result" style="display: block;">
+                            <div class="full-width section-flex-container">
+                                <div class="section-flex-inner">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div>
+                                                <h3 class="primary-title clear-gap-top gap-bottom-small">Welcome to
+                                                    Bookyourdata</h3>
+                                                <p class="gap-bottom-medium">Run an example search for <strong>United
+                                                        States</strong></p>
+                                            </div><button type="button" class="button button-primary">Run an Example
+                                                Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;" class="health-table">
+                            <div class="gap-bottom-medium">
+                                <div class="row">
+                                    <div class="col-md-1"><strong class="text-success">include</strong></div>
+                                    <div class="col-md-11">
+                                        <div class="tags" style="margin-bottom: 0px;"><span class="tag">Country: United
+                                                States<button type="button" style="background-color: transparent;padding: 0 0 0 10px;border: 0;">
+                                                    <i class="fa fa-times"></i>
+                                                </button></span><button type="button" class="button button-octonary button-xsmall tags-remove-all-btn">Clear
+                                                All Filters</button></div>
+                                    </div>
+                                </div>
+                            </div><span class="block gap-bottom-xsmall">Preview of 20 direct email contacts found as
+                                sample for your current search.</span>
+                            <table class="table table-primary table-hover table-fixed table-pointer shadow-primary gap-bottom-xsmall">
+                                <thead>
+                                    <tr>
+                                        <th>Direct Email</th>
+                                        <th>Contact Name</th>
+                                        <th>Company &amp; Job Level</th>
+                                        <th>Job Function &amp; Job Department</th>
+                                        <th>Country &amp; City</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-red">
+            <div class="container block-container">
+                <div class="block-col block-col-left">
+                    <h5 class="block-text gap-bottom-tld">Ready To Boost Your Sales Like Your Competitors? Try Our Tool
+                        For
+                        Free.</h5>
+                </div>
+                <div class="block-col block-col-right">
+                    <a class="button button-quaternary full-width" href="#">
+                        Build a List <span class="pull-right"><img src="images/right-arrow.png" alt=""> </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @include('new_footer')

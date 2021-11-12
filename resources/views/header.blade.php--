@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="{{ asset('/sa-assets/images/favicon.png') }}">
+      <title>{{ LAConfigs::getByKey('sitename') }} | {{$page}}</title>
+      <link href="{{ asset('/sa-assets/css/style.css') }}" rel="stylesheet">
+      <link href="{{ asset('/sa-assets/css/responsive.css') }}" rel="stylesheet">
+   </head>
+   <body>
+      <div class="wrapper">
+         <header id="header">
+            <div class="top_hd">
+               <div class="container ">
+                  <div class="row">
+                     <div class="  col-sm-4 col-md-4">
+                        <a href="{{ url('/') }}" class="logo"><img src="{{ LAConfigs::getByKey('logo') }}" class="img-responsive" alt="logo"/></a>                      
+                     </div>
+                     <div class=" col-sm-8 col-md-6 pull-right col-xs-12">
+                        <ul class="list-inline social-links">
+                           <li><a href="" class="icon-facebook" ></a></li>
+                           <li><a href="" class="icon-twitter" ></a></li>
+                           <li><a href="" class="icon-google" ></a></li>
+                           <li><a href="" class="icon-instagram" ></a></li>
+                        </ul>
+                        <ul id="user-contact" >
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/frontlogin') }}">Sign Up</a></li>
+                            <li><a href="{{ url('/frontlogin') }}">Log in</a></li>
+                        @else
+                           <li><a href="{{ url('/logout') }}">Logout</a></li>
+                        @endif
+                        </ul>
+                        <nav id="navg" class="navbar navbar-tops">
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              </button>
+                              <a id="brand" class="navbar-brand" href="index.html"><img src="{{ asset('/sa-assets/images/logo.png') }}" alt="logo"/></a>
+                           </div>
+                           <div id="navbar" class="collapse navbar-collapse">
+                              <ul class="nav navbar-nav">
+                              @for ($i = 0; $i < count($frontpages); $i++)
+                                 <li @if ($page == $frontpages[$i]->slug) class="active" @endif><a href="<?php echo url('/'.$frontpages[$i]->slug) ?>">{{$frontpages[$i]->name}}</a></li>
+                              @endfor
+                              </ul>
+                           </div>
+                           <!-- /.nav-collapse -->
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+               <!-- Fixed navbar -->
+               <!-- =================================================================================
+                  ==================================Banner end==================================
+                  ========================================================-->
+               <!-- /.navbar -->
+            </div>
+            <!--top-hd-->
+         </header>

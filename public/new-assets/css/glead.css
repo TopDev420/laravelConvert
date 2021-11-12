@@ -1,0 +1,656 @@
+/********Monthy plan*********/
+.membership-pricing-table table {
+	width: 100%;
+}
+.membership-pricing-table {
+    width:100%;
+}
+
+.membership-pricing-table table .icon-no,.membership-pricing-table table .icon-yes {
+    font-size: 22px
+}
+
+.membership-pricing-table table .icon-no {
+    color: #a93717
+}
+
+.membership-pricing-table table .icon-yes {
+    color: #209e61
+}
+
+.membership-pricing-table table .plan-header {
+    text-align: center;
+    font-size: 48px;
+    border: 1px solid #e2e2e2;
+    padding: 25px 0
+}
+
+.membership-pricing-table table .plan-header-free {
+    background-color:none;
+    color: #555
+}
+
+.membership-pricing-table table .plan-header-blue {
+    color: #fff;
+    background-color: #61a1d1;
+    border-color: #3989c6
+}
+
+.membership-pricing-table table .plan-header-standard {
+	color: #000;
+	background-color: #fff;
+	border-color: none;
+}
+
+.membership-pricing-table table td {
+    text-align: center;
+    width: 15%;
+    padding: 7px 10px;
+    background-color: #fafafa;
+    font-size: 14px;
+    -webkit-box-shadow: 0 1px 0 #fff inset;
+    box-shadow: 0 1px 0 #fff inset
+}
+
+.membership-pricing-table table,.membership-pricing-table table td {
+    border: 1px solid #ebebeb
+}
+
+.membership-pricing-table table tr td:first-child {
+    background-color: transparent;
+    width: 24%
+}
+
+.membership-pricing-table table tr td:nth-child(5) {
+    background-color: #FFF
+}
+
+.membership-pricing-table table tr:first-child td,.membership-pricing-table table tr:nth-child(2) td {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.membership-pricing-table table tr:first-child th:first-child {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #e2e2e2
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-name {
+    font-size: 22px
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price {
+    line-height: 35px
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price>sup {
+    font-size: 45%
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price>span {
+    font-size: 30%
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-period {
+    margin-top: -7px;
+    font-size: 25%
+}
+
+.membership-pricing-table table .header-plan-inner {
+    position: relative
+}
+
+.membership-pricing-table table .recommended-plan-ribbon {
+    box-sizing: content-box;
+    background-color: #dc3b5d;
+    color: #FFF;
+    position: absolute;
+    padding: 3px 6px;
+    font-size: 11px!important;
+    font-weight: 500;
+    left: -6px;
+    top: -22px;
+    z-index: 99;
+    width: 100%;
+    -webkit-box-shadow: 0 -1px #c2284c inset;
+    box-shadow: 0 -1px #c2284c inset;
+    text-shadow: 0 -1px #c2284c
+}
+
+.membership-pricing-table table .recommended-plan-ribbon:before {
+    border: solid;
+    border-color: #c2284c transparent;
+    border-width: 6px 0 0 6px;
+    bottom: -5px;
+    content: "";
+    left: 0;
+    position: absolute;
+    z-index: 90
+}
+
+.membership-pricing-table table .recommended-plan-ribbon:after {
+    border: solid;
+    border-color: #c2284c transparent;
+    border-width: 6px 6px 0 0;
+    bottom: -5px;
+    content: "";
+    right: 0;
+    position: absolute;
+    z-index: 90
+}
+
+.membership-pricing-table table .plan-head {
+    box-sizing: content-box;
+    background-color: #ff9c00;
+    border: 1px solid #cf7300;
+    position: absolute;
+    top: -33px;
+    left: -1px;
+    height: 30px;
+    width: 100%;
+    border-bottom: none
+}
+.signup {
+	font-size: 16px;
+	width: 100%;
+	max-width: 151px;
+	margin: 10px 0 0 0;
+	background: #2176B7;
+	color: #fff;
+	border: 0px;
+	border-radius: 5px;
+	font-weight: normal;
+}
+.signupprce {
+	font-size: 16px;
+	width: 174px;
+	border: 0px;
+	border-radius: 4px;
+	background: #ffa500;
+	font-weight: normal;
+	padding: 0 0 0 0;
+	margin: 9px 0 0 0;
+}
+.membership-pricing-table table > tbody > tr > td {
+	padding: 20px !important;
+	background: #FFF !important;
+}
+
+/***********Monthly Plan Success****************/
+.checkout-box{
+  padding: 40px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.3);
+}
+.single-check-field{
+  margin-bottom: 15px;
+}
+.single-check-field label{
+  color: #3a3737;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+  width: 100%;
+}
+.single-check-field input{
+	width:100%;
+}
+.single-check-field input {
+	width: 100%;
+	border-radius: 1px !important;
+	border: 1px solid #ddd;
+	height: 36px;
+	box-shadow: 2px 1px 1px 0px;
+    padding: 0 0px 0 10px;
+}
+.strp_month {
+	width: 95% !important;
+}
+.payment-errors {
+    color: red;
+}
+.cvc{
+	width:95% !important;
+}
+.pay_amount{
+	width: 100%;
+    border-radius: 1px !important;
+    border: 1px solid #ddd;
+    height: 36px;
+    box-shadow: 2px 1px 1px 0px;
+}
+.single-check-field span {
+    width: 100%;
+    border-radius: 1px !important;
+    border: 1px solid #ddd;
+    height: 36px;
+    box-shadow: 2px 1px 1px 0px;
+    padding: 0px 92% 16px 8px;
+}
+
+/********Buildlist**********/
+.right-list li .box h4 {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #555 !important;
+}
+.contact-list li {
+	display: inline-block;
+	padding-right: 50px;
+}
+
+.tool-top-bar__right {
+	width: 30%;
+	float: right;
+}
+.tool-top-bar__left {
+	width: 70%;
+	float: left;
+}
+.contact-list li {
+	display: inline-block;
+	list-style: none;
+	padding-right: 17px;
+}
+.contact-list01 li {
+	list-style: none;
+	display: inline-block;
+	padding-right: 27px;
+}
+.contact-ffl li {
+	display: inline-block !important;
+}
+.hidden-top-sgrgmenu {
+	width: 100%;
+	float: left;
+	background: #eee;
+}
+
+.tool-top {
+	width: 100%;
+	float: left;
+	margin: 50px 0;
+	border-bottom: 1px #ddd solid;
+	padding-bottom: 12px;
+}
+.tool-top-bar__contacts.gap-right {
+	text-transform: uppercase;
+	color: #fd000d;
+	font-weight: bold;
+	font-size: 19px;
+	vertical-align: middle;
+}
+.contact-list {
+	padding: 0px;
+}
+.dbtn {
+	background: none;
+	border: 0px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #999;
+}
+.dbtn {
+	background: none;
+	border: 0px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #999;
+}
+.contactlist-1 li {
+	display: inline;
+	padding-left: 44px;
+}
+.dbtn .fa {
+	margin-right: 9px;
+}
+.priceicart {
+	background: #e74c3c;
+	color: #fff;
+	border: 0px;
+	padding: 10px 35px;
+	font-size: 16px;
+}
+.priceicart .fa {
+	margin-right: 12px;
+}
+.priceicart {
+	background:#fd000d;
+	color: #fff;
+	border: 0px;
+	padding: 10px 35px;
+	font-size: 16px;
+	border-radius: 3px;
+	/* border: 2px #000 solid; */
+}
+.tool-top-bar__price.gap-right {
+	font-size: 21px;
+	font-weight: bold;
+	color: #fd000d;
+}
+.all_selected_value li {
+    display: inline-block;
+    border: 1px #ddd solid;
+    margin-right: 10px;
+    padding: 4px 16px 4px 6px;
+    position: relative;
+    text-align: right;
+}
+.form__control.full-width.gap-bottom {
+	width: 100%;
+	border-radius: 0px !important;
+	border: 1px solid #e3e3e3;
+	height: 40px;
+	padding: 0 0px 0 11px;
+	font-size: 16px;
+	background-color: #f3f3f3;
+	color: #383b3e !important;
+}
+.modal-title {
+	letter-spacing: 2px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.save_my_list {
+	background-color: #FD000D;
+	color: #fff;
+	border: 1px solid #fd000d;
+	padding: 10px 20px 10px 20px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 16px;
+	box-shadow: 0 3px 0 0 #c21a07;
+}
+.modal-header {
+	border-bottom: none !important; 
+}
+.modal-footer {
+	border-top: none !important; 
+}
+.modal-content{
+	border-radius: 0 !important;
+}
+
+/********Dashboard Profile Page*********/
+.butn-submit:hover{
+	color:#fff;
+	text-decoration: none;
+}
+.update-content{
+	width: 100%;
+	float: left;
+}
+.updtinfo{
+	width:100%;
+	height:50px;
+	line-height: 24px;
+	font-size: 16px;
+	color:#383b3e;
+	border-radius: 1px;
+	border:1px solid #e3e3e3;
+	background-color: #f3f3f3;
+}
+select2 select2-container select2-container--default{
+	width:100% !important;
+	height:50px !important;
+}
+.select2.select2-container.select2-container--default {
+	width: 100% !important;
+	height: 50px !important;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+	float: left;
+}
+.updtaeinfo {
+	width: 100%;
+	height: 40px;
+	border-radius: 1px;
+	border: 1px solid #e74c3c;
+	background-color: #e74c3c;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+.select2-selection.select2-selection--single {
+	background-color: #f3f3f3;
+	border:1px solid #e3e3e3;
+	line-height: 24px;
+	font-size: 16px;
+	color:#383b3e;
+	border-radius: 1px;
+}
+.intl-tel-input.allow-dropdown {
+    width: 100% !important;
+}
+
+/*********DAshboard Searchdata Page***********/
+
+.butn-submit:hover{
+	color:#fff;
+	text-decoration: none;
+}
+.update-content{
+	width: 100%;
+	float: left;
+}
+.updtinfo{
+	width:100%;
+	height:50px;
+	line-height: 24px;
+	font-size: 16px;
+	color:#383b3e;
+	border-radius: 1px;
+	border:1px solid #e3e3e3;
+	background-color: #f3f3f3;
+}
+select2 select2-container select2-container--default{
+	width:100% !important;
+	height:50px !important;
+}
+.select2.select2-container.select2-container--default {
+	width: 100% !important;
+	height: 50px !important;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+	float: left;
+}
+.updtaeinfo {
+	width: 100%;
+	height: 40px;
+	border-radius: 1px;
+	border: 1px solid #e74c3c;
+	background-color: #e74c3c;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+.select2-selection.select2-selection--single {
+	background-color: #f3f3f3;
+	border:1px solid #e3e3e3;
+	line-height: 24px;
+	font-size: 16px;
+	color:#383b3e;
+	border-radius: 1px;
+}
+.intl-tel-input.allow-dropdown {
+    width: 100% !important;
+}
+.dahb_seach_btn {
+	text-transform: uppercase;
+	padding: 10px 25px 10px 25px;
+	background-color: #E74C3C;
+	color: #fff;
+	border: 1px solid #E74C3C;
+}
+.savd_info {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+	box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+
+.savd_info td, .savd_info th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.savd_info tr:nth-child(even){background-color: #f2f2f2;}
+
+.savd_info th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 21px;
+}
+.rename_list{
+	width: 100%;
+	border-radius: 0px !important;
+	border: 1px solid #e3e3e3;
+	height: 40px;
+	padding: 0 0px 0 11px;
+	font-size: 16px;
+	background-color: #f3f3f3;
+	color: #383b3e !important;
+}
+.ren_title{
+	float:left;
+	letter-spacing: 2px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.rnm_cont{
+	float:left;
+}
+.modal-header {
+	border-bottom: none !important; 
+}
+.modal-footer {
+	border-top: none !important; 
+}
+.rename_save_list{
+	background-color: #FD000D;
+	color: #fff;
+	border: 1px solid #fd000d;
+	padding: 10px 20px 10px 20px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 16px;
+	box-shadow: 0 3px 0 0 #c21a07;
+}
+.modal-content{
+	border-radius:0 !important;
+}
+.rnm {
+	background: transparent;
+	border: 0;
+	color: #FD000D;
+}
+.dlt{
+	color:#FD000D;
+}
+.list_title {
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: 600;
+	float: left;
+	margin-bottom: 2px;
+}
+.rndbtn {
+	float: left;
+}
+
+/****Dashborad Export File/Download File Page*****/
+.savd_info {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+	box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+
+.savd_info td, .savd_info th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    line-height: 40px;
+}
+
+.savd_info tr:nth-child(even){background-color: #f2f2f2;}
+
+.savd_info th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 21px;
+}
+.export-file {
+    text-decoration: none;
+    border: 1px solid #e74c3c;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 40px 8px 40px;
+    border-radius: 4px;
+    /*float: left;*/
+}
+.export-file:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/********Payment Page**********/
+.checkout-box{
+  padding: 40px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.3);
+}
+.single-check-field{
+  margin-bottom: 15px;
+}
+.single-check-field label{
+  color: #3a3737;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+  width: 100%;
+}
+.single-check-field input{
+	width:100%;
+}
+.single-check-field input {
+	width: 100%;
+	border-radius: 1px !important;
+	border: 1px solid #ddd;
+	height: 36px;
+	box-shadow: 2px 1px 1px 0px;
+}
+.strp_month {
+	width: 95% !important;
+}
+.payment-errors {
+    color: red;
+}
+.cvc{
+	width:95% !important;
+}
+.pay_amount{
+	width: 100%;
+    border-radius: 1px !important;
+    border: 1px solid #ddd;
+    height: 36px;
+    box-shadow: 2px 1px 1px 0px;
+}
+.single-check-field span {
+    width: 100%;
+    border-radius: 1px !important;
+    border: 1px solid #ddd;
+    height: 36px;
+    box-shadow: 2px 1px 1px 0px;
+    padding: 0px 90% 16px 8px;
+}

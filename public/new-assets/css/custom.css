@@ -1,0 +1,277 @@
+.jmbtrn-regular-bg {
+
+    background-image: url(../images/new/covers/regular.jpg);
+
+    color: #fff;
+
+}
+
+.jmbtrn-about {
+    background-image: url(../images/new/about/about-cover.jpg);
+    color: #fff;
+}
+.jmbtrn-about-properties {
+    background-image: url(../images/new/about/about-properties-cover.jpg);
+    color: #fff;
+}
+.list-secondary>.list-item:before {
+    background-image: url(../images/new/checking.png);
+ }
+.jmbtrn-contact {
+    background-image: url(../images/new/about/contact-cover.png);
+}
+
+.removefiles.fa.fa-times {
+
+    background-color: transparent;
+
+    border: 0;
+
+    font-size: 11px;
+
+    position: relative;
+
+    top: -2px;
+
+}
+
+.successsupport{
+
+    font-size: 14px;color: green; font-weight: 700;padding: 10px;border: 1px solid;background-color: #cfebcf; display: inherit; display: none;
+}
+
+.removefiles {
+
+    background-color: transparent;
+
+    border: none;
+
+}
+
+.filter-save-data {
+
+    list-style-type: none;
+
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-save-data {
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    padding: 5px 5px 5px 10px;
+
+    background-color: #fff;
+
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+
+}
+ 
+.second {
+
+    width: 100%;
+
+    height: 1000px;
+
+    background: #999;
+
+}
+
+.aleart-login.active {
+
+    top: 0;
+
+}
+
+
+
+   .aleart-login {
+
+    display: flex;
+
+    height: 100px;
+
+    background-color: #fd000d;
+
+    color: #fff;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: fixed;
+
+    width: 100%;
+
+    z-index: 500;
+
+    top: -100px;
+
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+    .aleart-login p span {
+
+    background-color: #fff;
+
+    color: #fd000d;
+
+    font-size: 14px;
+
+    padding: 6px 12px;
+
+    margin-right: 10px;
+
+} 
+
+.aleart-login p {
+
+   
+
+    margin: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aleart-success.active {
+
+    top: 0;
+
+}
+
+
+
+   .aleart-success {
+
+    display: flex;
+
+    height: 100px;
+
+    background-color: green;
+
+    color: #fff;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: fixed;
+
+    width: 100%;
+
+    z-index: 500;
+
+    top: -100px;
+
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+    .aleart-success p span {
+
+    background-color: #fff;
+
+    color: #fd000d;
+
+    font-size: 14px;
+
+    padding: 6px 12px;
+
+    margin-right: 10px;
+
+} 
+
+.aleart-success p {
+
+   
+
+    margin: 0px;
+
+}
+
+.build-tool-loading {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(255,255,255,.6);
+
+    z-index: 10;
+
+}
+
+.build-tool-loading img {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 112px;
+
+    height: 127px;
+
+    margin-top: -63.5px;
+
+    margin-left: -56px;
+
+    z-index: 11;
+
+} 
+
+.close-btn.close-btn-small.pull-right.removeitem {
+
+    cursor: pointer;
+
+}
+
+ul.c-filter-selected-list-items.joblevels li.filter-save-data {
+
+    display: block;margin-bottom:10px
+
+    
+
+}
+
+.custom-checkbox-primary > .is-child-check + .custom-checkbox-mask {
+    background-color: red;
+        position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border-style: solid;
+    border-width: 1px;
+}

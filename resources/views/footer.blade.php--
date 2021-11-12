@@ -1,0 +1,87 @@
+<section class="footer-btm">
+       <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+             <a href="" class="ftr-logo"><img src="{{ asset('/sa-assets/images/fotr-logo.png') }}" alt=""></a>
+           </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <ul class="list-inline">
+                            @for ($i = 0; $i < count($frontpages); $i++)
+                                 <li @if ($page == $frontpages[$i]->slug) class="active" @endif><a href="<?php echo url('/'.$frontpages[$i]->slug) ?>">{{$frontpages[$i]->name}}</a></li>
+                              @endfor
+                       </ul>
+           </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        @if (Auth::guest())
+                            <a href="{{ url('/frontlogin') }}"><button class="login wht">Log in &gt;&gt;</button></a>
+                            <a href="{{ url('/frontlogin') }}"><button class="login wht">Sign up&gt;&gt;</button></a>
+                        @else
+                           <li><a href="{{ url('/logout') }}">Logout</a></li>
+                        @endif
+            
+           </div>
+         </div>
+      </div>
+     </section>
+      <!-- ====================== ===========================================================
+         ==================================track end==================================
+         ========================================================-->
+      <!-- jQuery  -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Bootstrap js -->
+      <script src="{{ asset('/sa-assets/js/bootstrap.min.js') }}"></script>
+      <!-- Animation on scroll js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> 
+      <!-- custom js -->
+      <script src="{{ asset('/sa-assets/js/main.js') }}"></script>
+      </div>
+      <script>
+$(function () {
+   $('#san_country').on('change', function() {
+      $('#san_state').find('option').remove();
+     var id = this.value;
+     $.ajax({
+               headers: {
+                  'X-CSRF-TOKEN': '{{ csrf_token() }}'
+              },
+               type:'POST',
+               url:"{{ url('/get_states') }}",
+               data: {
+                  'id': id
+              },
+               success:function(data){
+                  var option = '<option value="">Select State..</option>';
+                  $.each(data, function( index, value ) {
+                     option += '<option value="'+value.id+'">'+value.name+'</option>';
+                 
+              });
+              $('#san_state').append(option);
+               }
+            });
+   });
+   $('#san_state').on('change', function() {
+      $('#san_city').find('option').remove();
+     var id = this.value;
+     $.ajax({
+               headers: {
+                  'X-CSRF-TOKEN': '{{ csrf_token() }}'
+              },
+               type:'POST',
+               url:"{{ url('/get_cities') }}",
+               data: {
+                  'id': id
+              },
+               success:function(data){
+                  var option = '<option value="">Select City..</option>';
+                  $.each(data, function( index, value ) {
+                     option += '<option value="'+value.id+'">'+value.name+'</option>';
+              });
+              $('#san_city').append(option);
+                  console.log(option);
+               }
+            });
+   });
+});
+</script>
+   </body>
+</html>

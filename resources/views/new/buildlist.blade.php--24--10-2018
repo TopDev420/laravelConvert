@@ -1,0 +1,1138 @@
+<style>
+
+.right-list li .box h4 {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #555 !important;
+}
+.contact-list li {
+	display: inline-block;
+	padding-right: 50px;
+}
+
+.tool-top-bar__right {
+	width: 30%;
+	float: right;
+}
+.tool-top-bar__left {
+	width: 70%;
+	float: left;
+}
+.contact-list li {
+	display: inline-block;
+	list-style: none;
+	padding-right: 17px;
+}
+.contact-list01 li {
+	list-style: none;
+	display: inline-block;
+	padding-right: 27px;
+}
+.contact-ffl li {
+	display: inline-block !important;
+}
+.hidden-top-sgrgmenu {
+	width: 100%;
+	float: left;
+	background: #eee;
+}
+
+.tool-top {
+	width: 100%;
+	float: left;
+	margin: 50px 0;
+	border-bottom: 1px #ddd solid;
+	padding-bottom: 12px;
+}
+.tool-top-bar__contacts.gap-right {
+	text-transform: uppercase;
+	color: #fd000d;
+	font-weight: bold;
+	font-size: 19px;
+	vertical-align: middle;
+}
+.contact-list {
+	padding: 0px;
+}
+.dbtn {
+	background: none;
+	border: 0px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #999;
+}
+.dbtn {
+	background: none;
+	border: 0px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #999;
+}
+.contactlist-1 li {
+	display: inline;
+	padding-left: 44px;
+}
+.dbtn .fa {
+	margin-right: 9px;
+}
+.priceicart {
+	background: #e74c3c;
+	color: #fff;
+	border: 0px;
+	padding: 10px 35px;
+	font-size: 16px;
+}
+.priceicart .fa {
+	margin-right: 12px;
+}
+.priceicart {
+	background:#fd000d;
+	color: #fff;
+	border: 0px;
+	padding: 10px 35px;
+	font-size: 16px;
+	border-radius: 3px;
+	/* border: 2px #000 solid; */
+}
+.tool-top-bar__price.gap-right {
+	font-size: 21px;
+	font-weight: bold;
+	color: #fd000d;
+}
+.all_selected_value li {
+    display: inline-block;
+    border: 1px #ddd solid;
+    margin-right: 10px;
+    padding: 4px 16px 4px 6px;
+    position: relative;
+    text-align: right;
+}
+
+</style>
+
+@include('header')
+
+<div id="global-leade-banner" style="background:url({{ $buildlist->image }}) no-repeat; height:450px;">
+ 	<div class="container">
+	    <div class="col-md-12 text-center">
+		   <div class="banner-conten">
+		    <h1>{{ $buildlist->title }}</h1>
+		    <p>{{ $buildlist->monthly_desp_one }}<br>
+	          {{ $buildlist->monthly_dep_two }}
+	      	</p>
+		   </div>
+		  
+		</div>
+ 	</div>
+</div>	
+<div id="overlay"></div>
+
+<input type="hidden" id="type_filter" value="">
+<section class="filter-list company-flterlst">
+    <div class="container">
+    	<div class="col-md-12">
+			<!--main-Tab-->
+			<div class="pricing-page-list">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#businesscontact"  aria-controls="home" role="tab" data-toggle="tab"><span class="busnes">Business Contacts</span></a>
+				    </li>
+					<li role="presentation" >	
+						<a href="#Healthcare1" aria-controls="profile" role="tab" data-toggle="tab"><span class="busnes">Healthcare</span></a>
+					</li>
+					<li role="presentation">
+						<a href="#Realestate" aria-controls="messages" role="tab" data-toggle="tab"><span class="busnes">Real Estate Agents</span></a>
+					</li>
+				</ul>
+				
+
+				<div class="tool-top">
+					<div class="tool-topinner">
+						<div class="col-md-7  rightheader">
+						 	<ul class="contact-list">
+						    	<li><span class="tool-top-bar__contacts gap-right">90,963 Contacts</span></li>
+						    	<li><a href="{{url('/')}}{{ Storage::disk('local')->url('documents/builtlistsample.csv')}}" type="button" class="dbtn" download><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>Download A Sample</a></li>
+								<li><button type="button" class="dbtn"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save This List</button></li>
+						 	</ul>
+						</div>
+						<div class="col-md-5 rightheader">
+							<ul class="contactlist-1">
+						   		<li><span class="tool-top-bar__price gap-right">$5,102</span></li>
+						 		<li><button type="button" class="priceicart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Buy This List</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="businesscontact">
+			      	<div class="col-md-3">
+					    <div class="filter-bg">
+						   	<div class="tittle">
+							  	<ul class="right-list">
+
+		                            <li class="">
+										<label>Select Industry</label>
+										<a href="#div1" class="over" onclick="toggleVisibility('div1', 'industry');" type="button" data-box="div1">Select Industry<span class="pull-right">
+										<i class="fa fa-bars" aria-hidden="true"></i> </span></a>
+									  	<div class="right-appera-box"  id="div1">
+		                              		<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select Industries</h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px; margin: 15px 0 10px 0;">You can select one or more industries.</p>
+													<div class="form-group frmgp"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><span class="fasearchs"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+
+		                                        	<ul id="myUL">
+		                                         	@foreach($filter_indus as $indus)
+		                                         		<li><a href="javascript:void(0)"><input class="filter_result" name="indus" value="{{$indus}}" type="checkbox" id="industry_checkbox" data-id="industry"><label>{{$indus}}</label></a></li>
+													@endforeach
+													</ul> 
+										    	</div>
+												<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn include_ind include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+											  	</div>
+										 	</div>
+									        <div class="searchbox-01">
+											  	<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select Industries</h4>
+											  	<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px;">You can select one or more industries.</p>
+											  	<div class="after-selected-item">
+											     	<div class="form-group selected_value" id="selected_value">
+											     	<ul class="industry">
+
+											     	</ul>
+												   	<p>There is no Selected item</p>
+												 	</div>
+											  	</div>
+										    </div>
+							      		</div>
+									</li>
+
+									<li class="nav-link">
+									  	<label>Company Name</label>
+									  	<a  href="#div2" class="over"  onclick="toggleVisibility('div2', 'company');" type="button" data-box="div2"> Company name <span class="pull-right">
+									  	<i class="fa fa-bars" aria-hidden="true"></i></span></a>
+									    <div class="right-appera-box"  id="div2">
+											<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select company name</h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px; margin: 15px 0 10px 0;">Please type a company name to filter</p>
+													<div class="form-group frmgp"><input type="text" class="filter_result comny" data-id="company" name="company_name" id="myInput" onkeyup="myFunction()" placeholder="Enter Company name.."><span class="fasearchs"></span></div>
+										     	</div>
+											 	<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn ind_incude include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+												</div>
+										 	</div>
+								        	<div class="searchbox-01">
+										  		<h4 style="font-weight: bold;text-transform: uppercase;color: #000; margin: 15px 0 10px 0;">Select company name</h4>
+										  		<div class="after-selected-item">
+										     		<div class="form-group selected_value" id="selected_value">
+										     			<ul class="company">
+
+										     			</ul>
+											   			<p>There is no Selected item</p>
+													 </div>
+										  		</div>
+								    		</div>
+							      		</div>
+									</li>
+
+									<div class="job-level second">
+										<div class="">
+											<label>Update</label>
+									   		<span class="text-semibold">Employee Range</span>
+									   		<span class="pull-right">0 - 1B</span>
+										  	<div class="col-md-6 paddzero"> 
+										    	<input class="form__control range" placeholder="Minimum" value="" type="text"  id="first_range">
+										  	</div>
+										   	<div class="col-md-6  paddzero"> 
+										     	<input class="form__control range" placeholder="Maximium" value="" type="text" id="second_range">
+										  	</div>
+										  	<input type="button" value="Update" class="filter_employee" data-id="employee" name="employeeupdate">
+										</div>
+								
+									  	<div class="">
+									    	<label>Update</label>
+									   		<span class="text-semibold">Revenue Range</span>
+									  	 	<span class="pull-right">0 - 1T</span>
+										  	<div class="col-md-6 paddzero"> 
+										    	<input class="form__control range" placeholder="Minimum" value="" type="text" id="first_revenue">
+										  	</div>
+										   	<div class="col-md-6  paddzero"> 
+										     	<input class="form__control range" placeholder="Maximium" value="" type="text" id="second_revenue">
+										  	</div>
+										 	<input type="submit" value="Update" class="filter_employee" data-id="revenue" name="revenueupdate">
+										</div>
+									</div>
+
+								    <li class="nav-link">
+									   <label>Country</label>
+									   @foreach($filter_contry as $cnt)
+									  	<a  href="#div3" class="over"  onclick="toggleVisibility('div3', 'country');" checked type="button" data-box="div3">{{ $cnt }}<span class="pull-right">
+								      	<i class="fa fa-bars" aria-hidden="true"></i></span></a>
+								      	@endforeach
+									  	<div class="right-appera-box"  id="div3">
+											<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select Country</h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px; margin: 15px 0 10px 0;">By default only one country (United State).</p>
+													<div class="form-group frmgp"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><span class="fasearchs"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+
+			                                        <ul id="myUL">
+			                                         	@foreach($filter_contry as $cnt)
+			                                         	  	<li><a href="javascript:void(0)"><input class="filter_result" data-id="country" checked value="{{ $cnt }}" type="checkbox"><label>{{ $cnt }}</label></a></li>
+												  		@endforeach
+													</ul> 
+										     	</div>
+											 	<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+												</div>
+											</div>
+							        		<div class="searchbox-01">
+										  		<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select Job Levels</h4>
+										  		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px;">You can select one or more job levels.</p>
+										  		<div class="after-selected-item">
+										     		<div class="form-group selected_value" id="selected_value">
+												     	<ul class="country">
+
+												     	</ul>
+											   			<p>There is no Selected item</p>
+											 		</div>
+										  		</div> 
+									    	</div>
+							        	</div>
+									</li>
+
+									<li class="nav-link">
+									   	<label>State</label> 
+									  	<a  href="#div4" class="over" onclick="toggleVisibility('div4' , 'state');" type="button" data-box="div4">State<span class="pull-right"><i class="fa fa-bars" aria-hidden="true"></i></span></a>
+									  	<div class="right-appera-box"  id="div4">
+											<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select State  </h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px; margin: 15px 0 10px 0;">You can select one or more state.</p>
+													<div class="form-group frmgp"><input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><span class="fasearchs"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+
+		                                         	<ul id="myUL">
+		                                         	@foreach($filter_state as $stat)
+													  	<li><a href="javascript:void(0)"><input data-id="state" class="filter_result" value="{{ $stat }}" name="state" type="checkbox"><label>{{ $stat }}</label></a></li>
+													@endforeach
+												  	</ul> 
+										     	</div>
+											 	<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+												</div>
+										 	</div>
+								        	<div class="searchbox-01">
+										  		<h4 style="font-weight: bold;text-transform: uppercase;color: #000; margin: 15px 0 10px 0;">Select State</h4>
+										  		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px;">You can select one or more state.</p>
+										  		<div class="after-selected-item">
+										     		<div class="form-group selected_value" id="selected_value">
+												     	<ul class="state">
+
+												     	</ul>
+											   			<p>There is no Selected item</p>
+											 		</div>
+										  		</div>
+									    	</div>
+							      		</div>
+									</li>
+
+									<li class="nav-link">
+									  	<label>City</label>
+									  	<a class="over" href="#div5" onclick="toggleVisibility('div5', 'city');" type="button" data-box="div4">City <span class="pull-right">
+									   	<i class="fa fa-bars" aria-hidden="true"></i></span></a>
+									  	<div class="right-appera-box"  id="div5">
+											<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000; margin: 15px 0 10px 0;">Select Cities</h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px;">You can select one or more cities.</p>
+													<div class="form-group frmgp"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><span class="fasearchs"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+
+			                                        <ul id="myUL">
+			                                         	@foreach($filter_city as $cities)
+														  	<li><a href="javascript:void(0)"><input class="filter_result" data-id="city" value="{{ $cities }}" name="city" type="checkbox"><label>{{ $cities }}</label></a></li>
+														@endforeach
+													</ul> 
+										     	</div>
+											 	<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+												</div>
+										 	</div>
+								        	<div class="searchbox-01">
+										  		<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select cities</h4>
+										  		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px;">You can select one or more cities.</p>
+										  		<div class="after-selected-item">
+										     		<div class="form-group selected_value citi" id="selected_value">
+												     	<ul class="city">
+
+												     	</ul>
+											   			<p>There is no Selected item</p>
+											 		</div>
+										  		</div>
+											</div>
+							      		</div>
+									</li>
+
+									<li class="nav-link">
+									  	<label>Zipcode</label>
+									  	<a  href="#div6" class="over"  onclick="toggleVisibility('div6', 'zipcode');" type="button" data-box="div6"> Zipcode <span class="pull-right"><i class="fa fa-bars" aria-hidden="true"></i></span></a>
+									    <div class="right-appera-box"  id="div6">
+											<div class="serch-main">
+									   			<div class="search box">
+									    			<h4 style="font-weight: bold;text-transform: uppercase;color: #000;">Select Zipcode</h4>
+										    		<p style="color: #333; marign:20px 0 40px 0; color: #444; font-size: 18px; margin: 15px 0 10px 0;">Please type a zipcode to filter</p>
+													<div class="form-group frmgp">
+														<input type="text" class="filter_result zipcod" data-id="zipcode" name="zipcode" id="myInput" onkeyup="myFunction()" placeholder="Enter zipcode.."><span class="fasearchs"></span>
+													</div>
+								     			</div>
+												<div class="include-selected pull-right">
+												    <span style="cursor:pointer;" class="Include-btn ind_incude include"><i class="fa fa-check" aria-hidden="true"></i>Include</span>
+													<span class="Include-btn red"><i class="fa fa-times" aria-hidden="true"></i>Exclude</span>
+											  	</div>
+										 	</div>
+									        <div class="searchbox-01">
+											  	<h4 style="font-weight: bold;text-transform: uppercase;color: #000; margin: 15px 0 10px 0;">Select zipcode</h4>
+											  	<div class="after-selected-item">
+											     	<div class="form-group selected_value" id="selected_value">
+											     		<ul class="zipcode">
+											     		</ul>
+												   		<p>There is no Selected item</p>
+												 	</div>
+											  	</div>
+										    </div>
+							      		</div>
+									</li>
+	                        	</ul>
+							</div>
+						</div>
+					
+				        <!-- <div class="job-level second">
+						 	<select class="cntry filter_result" id="filter_by_indus" data-id="indus">
+						 		<option value="">Select Industry</option>
+							 	@foreach($filter_indus as $indus)
+								    <option value="{{$indus}}">{{$indus}}</option>
+								@endforeach
+						  	</select>
+						    <h3>Company</h3>
+						    <input type="text" placeholder="Enter Company Name" class="filter_result" data-id="company">
+					   		<div class="">
+						   		<span class="text-semibold">Employee Range</span>
+						   		<span class="pull-right">0 - 1B</span>
+							  	<div class="col-md-6 paddzero"> 
+							    	<input class="form__control range" placeholder="Minimum" value="" type="text"  id="first_range">
+							  	</div>
+							   	<div class="col-md-6  paddzero"> 
+							     	<input class="form__control range" placeholder="Maximium" value="" type="text" id="second_range">
+							  	</div>
+							  	<input type="button" value="Update" class="filter_employee" data-id="employee" name="employeeupdate">
+							</div>
+						  	<div class="">
+						    	<label>Update</label>
+						   		<span class="text-semibold">Revenue Range</span>
+						  	 	<span class="pull-right">0 - 1T</span>
+							  	<div class="col-md-6 paddzero"> 
+							    	<input class="form__control range" placeholder="Minimum" value="" type="text" id="first_revenue">
+							  	</div>
+							   	<div class="col-md-6  paddzero"> 
+							     	<input class="form__control range" placeholder="Maximium" value="" type="text" id="second_revenue">
+							  	</div>
+							 	<input type="submit" value="Update" class="filter_employee" data-id="revenue" name="revenueupdate">
+							</div>
+						</div> -->
+						<!-- <div class="job-level second">
+							<h3>Location ?</h3>
+						  	<select class="cntry filter_result" data-id="contry">
+
+						  		@foreach($filter_contry as $cnt)
+						  		<option value="{{ $cnt }}">{{ $cnt }}</option>
+						  		@endforeach
+						  	</select>
+						   	<select class="cntry filter_result" id="states" data-id="stat">
+						   		<option value="">Select State</option>
+						   		@foreach($filter_state as $stat)
+						    	<option value="{{ $stat }}">{{ $stat }}</option>
+						    	@endforeach
+						  	</select>
+						   	<select class="cntry filter_result" data-id="citi" id="cities">
+						   		<option value="">Select City</option>
+						   		@foreach($filter_city as $cities)
+						    	<option value="{{ $cities }}">{{ $cities }}</option>
+						    	@endforeach
+						  	</select>
+						  	<input type="text" class="filter_result" data-id="zipcod" placeholder="Zipcode">	
+					    </div> -->
+					</div>
+			     	
+				    <div class="col-md-9">
+				    	<!-- Show All selected value -->
+				    	<div>
+				     		<ul class="all_selected_value">
+
+				     		</ul>
+				     	</div>
+					 <div class="tag-list">
+						  	<table class="table">
+	                               <thead>
+								    <tr>
+										<th>Direct Email</th>
+										<th>Contact Name</th>
+										<th>Company Name</th>
+										<th>Job Title</th>
+										<th>Country & City</th>
+								  	</tr>
+								</thead>
+								<tbody id="filtered_result">
+									
+									@foreach($business_contacts as $row)
+									<tr>
+										
+										<td>{{ $row->email_address }}</td>
+										<td>{{ $row->last_name }}</td>
+										<td>{{ $row->company_name }}</td>
+										<td>{{ $row->job_title }}</td>
+										<td>{{ $row->country }}<br>
+											{{ $row->city }}
+										</td>
+									</tr>
+									@endforeach
+								</tbody>
+							</table>
+					    </div>   
+				    </div>
+				</div>
+	        
+				<div role="tabpanel" class="tab-pane " id="Healthcare1">
+					<div class="col-md-3">
+					    <div class="filter-bg" >	
+							<div class="job-level second">
+							    <h3>Company</h3>
+							    <input type="text" placeholder="Enter Company Name" class="filter_result" data-id="company">
+							</div>
+							<div class="job-level second">
+							<h3>Location ?</h3>
+							  	<select class="cntry filter_result" data-id="contry">
+
+							  		@foreach($filter_contry as $cnt)
+							  		<option value="{{ $cnt }}">{{ $cnt }}</option>
+							  		@endforeach
+							  	</select>
+							   	<select class="cntry filter_result" id="states" data-id="stat">
+							   		<option value="">Select State</option>
+							   		@foreach($filter_state as $stat)
+							    	<option value="{{ $stat }}">{{ $stat }}</option>
+							    	@endforeach
+							  	</select>
+							   	<select class="cntry filter_result" data-id="citi" id="cities">
+							   		<option value="">Select City</option>
+							   		@foreach($filter_city as $cities)
+							    	<option value="{{ $cities }}">{{ $cities }}</option>
+							    	@endforeach
+							  	</select>
+							  	<input type="text" class="filter_result" data-id="zipcod" placeholder="Zipcode">	
+						    </div>
+						</div>
+			     	</div>
+			     	<div class="col-md-9">
+					    <div class="tag-list">
+						  	<table class="table">
+
+								<thead>
+								    <tr>
+										<th>Direct Email</th>
+										<th>Contact Name</th>
+										<th>Company Name</th>
+										<th>Country & City</th>
+										<th>Phone Number</th>
+								  	</tr>
+								</thead>
+								<tbody id="filtered_result">
+									
+									@foreach($business_contacts as $row)
+									<tr>
+										
+										<td>{{ $row->email_address }}</td>
+										<td>{{ $row->last_name }}</td>
+										<td>{{ $row->company_name }}</td>
+										<td>{{ $row->country }}<br>
+											{{ $row->city }}
+										</td>
+										<td>{{ $row->phone_number }}</td>
+									</tr>
+									@endforeach
+								</tbody>
+
+							</table>
+					    </div>   
+				    </div>
+	            </div>
+
+				<div role="tabpanel" class="tab-pane" id="Realestate">
+					<div class="col-md-3">
+					    <div class="filter-bg">
+							<div class="job-level second">
+							    <h3>Company Name</h3>
+							    <input type="text" placeholder="Enter Company Name" class="filter_result" data-id="company">
+							</div>
+							<div class="job-level second">
+							<h3>Location ?</h3>
+							  	<select class="cntry filter_result" data-id="contry">
+
+							  		@foreach($filter_contry as $cnt)
+							  		<option value="{{ $cnt }}">{{ $cnt }}</option>
+							  		@endforeach
+							  	</select>
+							   	<select class="cntry filter_result" id="states" data-id="stat">
+							   		<option value="">Select State</option>
+							   		@foreach($filter_state as $stat)
+							    	<option value="{{ $stat }}">{{ $stat }}</option>
+							    	@endforeach
+							  	</select>
+							   	<select class="cntry filter_result" data-id="citi" id="cities">
+							   		<option value="">Select City</option>
+							   		@foreach($filter_city as $cities)
+							    	<option value="{{ $cities }}">{{ $cities }}</option>
+							    	@endforeach
+							  	</select>
+							  	<input type="text" class="filter_result" data-id="zipcod" placeholder="Zipcode">	
+						    </div>
+						</div>
+			     	</div>
+			     	
+					<div class="col-md-9">
+					    <div class="tag-list">
+						  	<table class="table">
+
+								<thead>
+								    <tr>
+										<th>Direct Email</th>
+										<th>Contact Name</th>
+										<th>Company Name</th>
+										<th>Country & City</th>
+										<th>Phone Number</th>
+								  	</tr>
+								</thead>
+								<tbody id="filtered_result">
+									
+									@foreach($business_contacts as $row)
+									<tr>
+										
+										<td>{{ $row->email_address }}</td>
+										<td>{{ $row->last_name }}</td>
+										<td>{{ $row->company_name }}</td>
+										<td>{{ $row->country }}<br>
+											{{ $row->city }}
+										</td>
+										<td>{{ $row->phone_number }}</td>
+									</tr>
+									@endforeach
+								</tbody>
+							</table>
+					    </div>   
+				    </div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>	
+
+
+  
+@include('footer')
+
+<script type="text/javascript">
+$(document).ready(function () {
+	// var indus = $('.filter_result_ind');
+	// indus.on('click',function () {
+	//     if ($(this).is(':checked')) {
+	//     	var ind_value = $(this).val();
+	    	
+	//         // alert('You have Checked it');
+	//     } else {
+	//         alert('You Un-Checked it');
+	//     }
+	// });
+
+ //    $('.include_ind').click(function(){
+	// 	$(".filter_result_ind:checked").each(function() {
+	// 		var indus = $(this).val();
+	// 		alert(indus);
+	// 	    // alert( $(this).val() );
+	// 	});
+	// });
+});
+
+// $('.filter_result').on('change', function() {
+// 	alert($(this).val());
+
+// 	var data = {};
+// 	$('.filter_result:checked').each(function(){
+// 		var type = $(this).data('id');
+// 		if (type =='indus' && $(this).val()) {
+// 			data['industries'] = $(this).val();
+// 		}
+// 		if (type =='company' && $(this).val()) {
+// 			data['company_name'] = $(this).val();
+// 		}
+// 		if (type =='contry' && $(this).val()) {
+// 			data['country'] = $(this).val();
+// 		}
+// 		if (type =='stat' && $(this).val()) {
+// 			data['state'] = $(this).val();
+// 		}
+// 		if (type =='citi' && $(this).val()) {
+// 			data['city'] = $(this).val();
+// 		}
+// 		if(type=='zipcod' && $(this).val()) {
+// 			data['zipcode'] = $(this).val();
+// 		}
+		
+// 		console.log($(this).val());
+// 	});
+// 	$.ajax({
+//       	headers: {
+//           	'X-CSRF-TOKEN': '{{ csrf_token() }}'
+//       	},
+//        	type:'POST',
+//        	url:"{{ url('/filter') }}",
+//        	data: {
+//           	'data': data
+//       	},
+//        	success:function(data){
+//        		var html ='';
+//        		$.each(data, function( index, value ) {
+
+//        			html += '<tr>'+
+// 				'<td>'+value["email_address"]+'</td>'+
+// 				'<td>'+value["last_name"]+'</td>'+
+// 				'<td>'+value["company_name"]+'</td>'+
+// 				'<td>'+value["job_title"]+'</td>'+
+// 				'<td>'+value["country"]+'<br>'+value["city"]+
+// 				'</td></tr>';
+// 			});
+// 			if (html) {
+
+// 				$('#filtered_result').html(html);
+
+// 			}else{
+				
+// 				$('#filtered_result').html('Not Found');
+// 			}
+//        	}
+//     });
+// });
+
+// $('.filter_employee').on('click', function() {
+
+// 	var data = {};
+// 	var range = {};
+// 	$('.filter_result').each(function(){
+// 		var type = $(this).data('id');
+// 		if (type =='indus' && $(this).val()) {
+// 			data['industries'] = $(this).val();
+// 		}
+// 		if (type =='company' && $(this).val()) {
+// 			data['company_name'] = $(this).val();
+// 		}
+// 		if (type =='contry' && $(this).val()) {
+// 			data['country'] = $(this).val();
+// 		}
+// 		if (type =='stat' && $(this).val()) {
+// 			data['state'] = $(this).val();
+// 		}
+// 		if (type =='citi' && $(this).val()) {
+// 			data['city'] = $(this).val();
+// 		}
+// 		if(type=='zipcod' && $(this).val()) {
+// 			data['zipcode'] = $(this).val();
+// 		}
+// 		// console.log($(this).val());
+// 	});
+// 	$('.range').each(function(){
+// 		var type = $(this).attr('id');
+// 		if (type =='first_range' && $(this).val()) {
+// 			range['first_range'] = $(this).val();
+// 		}
+// 		if (type =='second_range' && $(this).val()) {
+// 			range['second_range'] = $(this).val();
+// 		}
+// 		if (type =='first_revenue' && $(this).val()) {
+// 			range['first_revenue'] = $(this).val();
+// 		}
+// 		if (type =='second_revenue' && $(this).val()) {
+// 			range['second_revenue'] = $(this).val();
+// 		}
+// 	});
+// 	$.ajax({
+//         headers: {
+//             'X-CSRF-TOKEN': '{{ csrf_token() }}'
+//         },
+//     	type:'POST',
+//        	url:"{{ url('/filter') }}",
+//        	data: {
+//           	'data': data,
+//           	'range': range
+//       	},
+//        	success:function(data){
+//        		var html ='';
+//        		$.each(data, function( index, value ) {
+//        			html += '<tr>'+
+// 				'<td>'+value["email_address"]+'</td>'+
+// 				'<td>'+value["last_name"]+'</td>'+
+// 				'<td>'+value["company_name"]+'</td>'+
+// 				'<td>'+value["job_title"]+'</td>'+
+// 				'<td>'+value["country"]+'<br>'+value["city"]+
+// 				'</td></tr>';
+// 			});
+// 			if (html) {
+// 				$('#filtered_result').html(html);
+// 			}else{
+// 				$('#filtered_result').html('Not Found');
+// 			}
+//        	}
+//     });
+// });
+
+// $('#states').on('change', function() {
+// 	$.ajax({
+//         headers: {
+//               'X-CSRF-TOKEN': '{{ csrf_token() }}'
+//         },
+//         type:'POST',
+//         url:"{{ url('/get_cities') }}",
+//         data: {
+//             'stateid': $(this).val()
+//         },
+//         success:function(data){ 
+//         	var html='';
+//         	$.each(data, function( index, value ) {
+//         		html += '<option>'+value['name']+'</option>';
+//         	});
+//         	if (html) {
+// 						$('#cities').html(html);
+// 					}else{
+// 						$('#cities').html('Not Found');
+// 					}      	
+//        		// alert(data);
+//         }
+//     });
+// });
+
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+$('.include').on('click', function() {
+	
+	var data = {};
+	var state = [];
+	var industries = [];
+	var city = [];
+	var company = [];
+	var zipcode = [];
+	var filter = '';
+	var type = $('#type_filter').val();
+	// console.log(type);
+	$('.selected_value .'+ type).html(''); 
+	$('.filter_result:checked').each(function(){
+        
+		var incld_value = $(this).val();
+		// alert(incld_value);
+		// $('#selected_value').append(incld_value); 
+		 
+		typee = $(this).data('id');
+		if (type =='industry' && $(this).val() && typee == 'industry') {
+			industries.push($(this).val());
+            // datas.push('<li>'+incld_value+'</li>');
+			filter = filter+'<li>'+incld_value+'</li>';
+			// alert(datas);	
+		}
+		// if (type =='company' && $(this).val() && typee == 'company') {
+		// 	data['company_name'] = $(this).val();
+		// }
+		if (type =='country' && $(this).val() && typee == 'country') {
+			data['country'] = $(this).val();
+		}
+		if (type =='state' && $(this).val() && typee == 'state') {
+			state.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+			// datas.push('<li>'+incld_value+'</li>');
+		}
+		if (type =='city' && $(this).val() && typee == 'city') {
+			var datas = '';
+			city.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+			// datas.push('<li>'+incld_value+'</li>');	
+		}
+		// if(type=='zipcod' && $(this).val() && typee == 'zipcod') {
+		// 	data['zipcod'] = $(this).val();
+		// }	
+
+	});		
+
+	$('.comny').each(function(){
+		var incld_value = $(this).val();
+		typee = $(this).data('id');
+		if (type =='company' && $(this).val() && typee == 'company') {
+			company.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+		}
+		
+	});
+
+	$('.zipcod').each(function(){
+		var incld_value = $(this).val();
+		typee = $(this).data('id');
+		if (type =='zipcode' && $(this).val() && typee == 'zipcode') {
+			zipcode.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+		}
+		
+	});
+
+	data['zipcode'] = zipcode
+	data['company_name'] = company;
+	data['industries'] = industries;
+	data['state'] = state;
+	data['city'] = city;
+	
+	$('.selected_value .'+ type).html(filter); 
+	$('.all_selected_value').append(filter);
+	// $(".selected_value p").remove();
+	$.ajax({
+      	headers: {
+          	'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      	},
+       	type:'POST',
+       	url:"{{ url('/filter') }}",
+       	data: {
+          	'data': data,
+      	},
+       	success:function(data){
+       		var html ='';
+       		$.each(data, function( index, value ) {
+       			html += '<tr>'+
+				'<td>'+value["email_address"]+'</td>'+
+				'<td>'+value["last_name"]+'</td>'+
+				'<td>'+value["company_name"]+'</td>'+
+				'<td>'+value["job_title"]+'</td>'+
+				'<td>'+value["country"]+'<br>'+value["city"]+
+				'</td></tr>';
+			});
+			if (html) {
+				
+				$('#filtered_result').html(html);
+
+			}else{
+				
+				$('#filtered_result').html('Not Found');
+			}
+       	}
+    });
+});
+
+$('.filter_employee').on('click', function() {
+	var data = {};
+	var range = {};
+	var state = [];
+	var industries = [];
+	var city = [];
+	var company = [];
+	var zipcode = [];
+	var filter = '';
+	$('#type_filter').val($(this).data('id'));
+	var type = $('#type_filter').val();
+	// console.log(type);
+	$('.selected_value .'+ type).html(''); 
+	$('.filter_result:checked').each(function(){
+        
+		var incld_value = $(this).val();
+		// alert(incld_value);
+		// $('#selected_value').append(incld_value); 
+		 
+		typee = $(this).data('id');
+		if (type =='industry' && $(this).val() && typee == 'industry') {
+			industries.push($(this).val());
+            // datas.push('<li>'+incld_value+'</li>');
+			filter = filter+'<li>'+incld_value+'</li>';
+			// alert(datas);	
+		}
+		// if (type =='company' && $(this).val() && typee == 'company') {
+		// 	data['company_name'] = $(this).val();
+		// }
+		if (type =='country' && $(this).val() && typee == 'country') {
+			data['country'] = $(this).val();
+		}
+		if (type =='state' && $(this).val() && typee == 'state') {
+			state.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+			// datas.push('<li>'+incld_value+'</li>');
+		}
+		if (type =='city' && $(this).val() && typee == 'city') {
+			var datas = '';
+			city.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+			// datas.push('<li>'+incld_value+'</li>');	
+		}
+		// if(type=='zipcod' && $(this).val() && typee == 'zipcod') {
+		// 	data['zipcod'] = $(this).val();
+		// }	
+
+	});		
+
+	$('.comny').each(function(){
+		var incld_value = $(this).val();
+		typee = $(this).data('id');
+		if (type =='company' && $(this).val() && typee == 'company') {
+			company.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+		}
+		
+	});
+
+	$('.zipcod').each(function(){
+		var incld_value = $(this).val();
+		typee = $(this).data('id');
+		if (type =='zipcode' && $(this).val() && typee == 'zipcode') {
+			zipcode.push($(this).val());
+			filter = filter+'<li>'+incld_value+'</li>';
+		}
+		
+	});
+
+	data['zipcode'] = zipcode
+	data['company_name'] = company;
+	data['industries'] = industries;
+	data['state'] = state;
+	data['city'] = city;
+	
+	// $('.selected_value .'+ type).html(filter); 
+	// $('.all_selected_value').append(filter);
+
+	$('.range').each(function(){
+		var type = $(this).attr('id');
+		if (type =='first_range' && $(this).val()) {
+			range['first_range'] = $(this).val();
+		}
+		if (type =='second_range' && $(this).val()) {
+			range['second_range'] = $(this).val();
+		}
+		if (type =='first_revenue' && $(this).val()) {
+			range['first_revenue'] = $(this).val();
+		}
+		if (type =='second_revenue' && $(this).val()) {
+			range['second_revenue'] = $(this).val();
+		}
+	});
+
+	$.ajax({
+	headers: {
+	    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+	},
+	type:'POST',
+		url:"{{ url('/filter') }}",
+		data: {
+	  	'data': data,
+	  	'range': range
+		},
+		success:function(data){
+			var html ='';
+			$.each(data, function( index, value ) {
+				html += '<tr>'+
+			'<td>'+value["email_address"]+'</td>'+
+			'<td>'+value["last_name"]+'</td>'+
+			'<td>'+value["company_name"]+'</td>'+
+			'<td>'+value["job_title"]+'</td>'+
+			'<td>'+value["country"]+'<br>'+value["city"]+
+			'</td></tr>';
+		});
+			if (html) {
+				$('#filtered_result').html(html);
+			}
+			else
+			{
+				$('#filtered_result').html('Not Found');
+			}
+		}
+	});
+});
+
+
+/* $(document).ready(function() {  
+    $("#open-box").click(function() {  
+        $("#opennow").css('display', 'block');  
+    });  	
+}); */
+/* 
+ $('a').on('click', function () {
+  var divID = $(this).attr('data-box');
+  $(this).addClass('Active').siblings().removeClass('Active');
+  $('#' + divID).addClass('Active').siblings().removeClass('Active');
+})
+*/
+
+var divs = ["div1", "div2", "div3", "div4", "div5", "div6"];
+    var visibleDivId = null;
+    function toggleVisibility(divId,type = '') {
+
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+      	$('#type_filter').val(type);
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    }
+
+
+
+$('.right-list li a').click(function(){
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 130
+	}, 1700);
+    return false;
+});
+$('.scrollTop a').scrollTop();
+   
+$('.over').click(function(e){
+    $('#overlay').fadeIn(300);
+	e.preventDefault();
+});
+
+$(document).on('click','#overlay',function() {
+    $(this).fadeOut('3000');
+	$('.right-appera-box').css("display", "none");
+});
+  
+</script>
